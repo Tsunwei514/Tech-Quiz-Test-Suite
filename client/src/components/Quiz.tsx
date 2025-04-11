@@ -47,7 +47,7 @@ const Quiz = () => {
   if (!quizStarted) {
     return (
       <div className="p-4 text-center">
-        <button className="btn btn-primary d-inline-block mx-auto" onClick={handleStartQuiz}>
+        <button className="btn btn-primary d-inline-block mx-auto test-btn" onClick={handleStartQuiz}>
           Start Quiz
         </button>
       </div>
@@ -56,7 +56,7 @@ const Quiz = () => {
 
   if (quizCompleted) {
     return (
-      <div className="card p-4 text-center">
+      <div className='card p-4 test-card'>
         <h2>Quiz Completed</h2>
         <div className="alert alert-success">
           Your score: {score}/{questions.length}
@@ -81,7 +81,7 @@ const Quiz = () => {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className='card p-4'>
+    <div className='card p-4 test-card'>
       <h2>{currentQuestion.question}</h2>
       <div className="mt-3">
       {currentQuestion.answers.map((answer, index) => (
